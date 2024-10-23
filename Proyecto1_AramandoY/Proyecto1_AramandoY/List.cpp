@@ -1029,6 +1029,71 @@ void List::BubbleSort()
 	ReadList();
 }
 
+void List::InsertionSort()
+{
+	bool salir = false;
+	bool cambio = true;
+
+	Nodo* current = root;
+	Nodo* aux = root;
+	Nodo* NodoAinsertar = root;
+
+	int cantidadDeNodos = 0;
+	int index = 0;
+
+
+	switch (type)
+	{
+	case LISTA_LINEAL_LIGADA:
+		// Mientras sea desigual a null avanza y suma, esto sera para saber con cuantos nodos contamos
+		while (current->GetNext() != NULL) {
+			current = current->GetNext();
+			cantidadDeNodos++;
+		}
+
+		current = root;
+
+		while (!salir) {
+
+			aux = current;
+			index = current->GetValue();
+			
+			for (int i = 0; i <= cantidadDeNodos; i++) {
+
+				if (index > aux->GetValue()) {
+					index = aux->GetValue();
+					NodoAinsertar = aux;
+				}
+				
+				aux = aux->GetNext();
+			}
+
+			Swap(current, NodoAinsertar);
+			current = current->GetNext();
+			cantidadDeNodos--;
+
+			if (cantidadDeNodos == 0) {
+				salir = true;
+			}
+		}
+		break;
+
+	case LISTA_CIRCULAR_LIGADA:
+		break;
+
+
+	case LISTA_LINEAL_DLIGADA:
+		break;
+
+	case LISTA_CIRCULAR_DLIADA:
+		break;
+
+	default:
+		break;
+	}
+	ReadList();
+}
+
 //Recibe los nodos que se cambiaran y cambia el valor
 void List::Swap(Nodo* _nodoIzquierda, Nodo* _nodoDerecha)
 {

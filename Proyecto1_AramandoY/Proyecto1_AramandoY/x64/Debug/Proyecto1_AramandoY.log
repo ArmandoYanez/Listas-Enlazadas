@@ -1,5 +1,5 @@
 ﻿  List.cpp
-C:\Users\Armando\Desktop\Proyecto1_AramandoY\Proyecto1_AramandoY\List.cpp(120,10): warning C4101: 'previous': variable local sin referencia
-C:\Users\Armando\Desktop\Proyecto1_AramandoY\Proyecto1_AramandoY\List.cpp(814,8): warning C4101: 'nextNode': variable local sin referencia
-C:\Users\Armando\Desktop\Proyecto1_AramandoY\Proyecto1_AramandoY\List.cpp(894,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Proyecto1_AramandoY.vcxproj -> C:\Users\Armando\Desktop\Proyecto1_AramandoY\x64\Debug\Proyecto1_AramandoY.exe
+C:\Users\Armando\Desktop\Listas-enlazadas\Listas-Enlazadas\Proyecto1_AramandoY\Proyecto1_AramandoY\List.cpp(120,10): warning C4101: 'previous': variable local sin referencia
+C:\Users\Armando\Desktop\Listas-enlazadas\Listas-Enlazadas\Proyecto1_AramandoY\Proyecto1_AramandoY\List.cpp(814,8): warning C4101: 'nextNode': variable local sin referencia
+C:\Users\Armando\Desktop\Listas-enlazadas\Listas-Enlazadas\Proyecto1_AramandoY\Proyecto1_AramandoY\List.cpp(894,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Proyecto1_AramandoY.vcxproj -> C:\Users\Armando\Desktop\Listas-enlazadas\Listas-Enlazadas\Proyecto1_AramandoY\x64\Debug\Proyecto1_AramandoY.exe
