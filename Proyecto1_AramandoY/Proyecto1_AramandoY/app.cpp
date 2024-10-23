@@ -256,10 +256,10 @@ void app::menuOrdenamiento()
 			break;
 		}
 		else if (input == "2") {
-			std::cout << "Ordenamiento seleccionado : InsertionSort" << std::endl;
+			std::cout << "Ordenamiento seleccionado : Selection Sort" << std::endl;
 			
 			// Agregar metodo de ordenamineto InsertionSort
-			lista->InsertionSort();
+			lista->SelectionSort();
 
 			system("pause");
 			break;

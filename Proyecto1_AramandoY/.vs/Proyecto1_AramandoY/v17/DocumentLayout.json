@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -62,17 +62,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "app.cpp",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\app.cpp",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp",
               "RelativeToolTip": "Proyecto1_AramandoY\\app.cpp",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAAAQBAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAAYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-12T23:27:48.543Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -82,7 +81,7 @@
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\List.cpp",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.cpp",
               "RelativeToolTip": "Proyecto1_AramandoY\\List.cpp",
-              "ViewState": "AgIAAA4EAAAAAAAAAAAmwB4EAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEDAAAAAAAAAAAgwDAEAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-06T19:16:18.514Z",
               "EditorCaption": ""
@@ -119,13 +118,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "List.h",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\List.h",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h",
               "RelativeToolTip": "Proyecto1_AramandoY\\List.h",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-06T19:15:03.325Z",
               "IsPinned": true,

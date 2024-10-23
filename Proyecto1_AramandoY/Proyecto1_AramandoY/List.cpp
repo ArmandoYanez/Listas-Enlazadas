@@ -907,17 +907,15 @@ void List::RandomList(int cantValue, int maxValue, int minValue)
 
 }
 
-// Algorimo de ordenamiento burbuja (Se puede simplificar)
+// Algorimo de ordenamiento burbuja.
 void List::BubbleSort()
 {
 	bool salir = false;
 	bool cambio = true;
 	Nodo* current = root;
 
-	switch (type)
-	{
-	case LISTA_LINEAL_LIGADA:
-		
+	if (type == LISTA_LINEAL_DLIGADA || type == LISTA_LINEAL_LIGADA) {
+
 		while (!salir) {
 
 			if (current->GetNext() == nullptr) {
@@ -928,7 +926,7 @@ void List::BubbleSort()
 					salir = true;
 				}
 				else {
-					cambio = false; 
+					cambio = false;
 				}
 			}
 
@@ -941,11 +939,10 @@ void List::BubbleSort()
 			if (current->GetNext()) {
 				current = current->GetNext(); // Avanza el puntero
 			}
-			
 		}
-		break;
+	}
+	else if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIADA) {
 
-	case LISTA_CIRCULAR_LIGADA:
 		while (!salir) {
 			if (current->GetNext() == root) {
 				current = root;
@@ -968,83 +965,25 @@ void List::BubbleSort()
 				current = current->GetNext(); // Avanza el puntero
 			}
 		}
-		break;
-
-
-	case LISTA_LINEAL_DLIGADA:
-
-		while (!salir) {
-			if (current->GetNext() == nullptr) {
-				current = root;
-
-				if (!cambio) {
-					std::cout << "Lista doblemente ligada ordenada" << std::endl;
-					salir = true;
-				}
-				else {
-					cambio = false;
-				}
-			}
-
-			if (current->GetValue() > current->GetNext()->GetValue()) {
-				Swap(current, current->GetNext());
-				cambio = true;
-			}
-
-			if (current->GetNext() ) {
-				current = current->GetNext(); // Avanza el puntero
-			}
-		}
-		break;
-
-	case LISTA_CIRCULAR_DLIADA:
-
-		while (!salir) {
-			if (current->GetNext() == root) {
-				current = root;
-
-				if (!cambio) {
-					std::cout << "Lista circular doblemente ligada ordenada" << std::endl;
-					salir = true;
-				}
-				else {
-					cambio = false;
-				}
-			}
-
-			if (current->GetValue() > current->GetNext()->GetValue()) {
-				Swap(current, current->GetNext());
-				cambio = true;
-			}
-
-			if (current->GetNext() != root) {
-				current = current->GetNext(); // Avanza el puntero
-			}
-		}
-		break;
-
-	default:
-		break;
 	}
+	
 	ReadList();
 }
 
-void List::InsertionSort()
+// Algorimo de ordenamiento seleccion.
+void List::SelectionSort()
 {
 	bool salir = false;
-	bool cambio = true;
 
 	Nodo* current = root;
 	Nodo* aux = root;
 	Nodo* NodoAinsertar = root;
 
 	int cantidadDeNodos = 0;
-	int index = 0;
+	
 
+	if (type == LISTA_LINEAL_LIGADA || type == LISTA_LINEAL_DLIGADA) {
 
-	switch (type)
-	{
-	case LISTA_LINEAL_LIGADA:
 		// Mientras sea desigual a null avanza y suma, esto sera para saber con cuantos nodos contamos
 		while (current->GetNext() != NULL) {
 			current = current->GetNext();
@@ -1053,22 +992,23 @@ void List::InsertionSort()
 
 		current = root;
 
+		// Bucle principal
 		while (!salir) {
 
 			aux = current;
-			index = current->GetValue();
-			
+			NodoAinsertar = current;
+
+			// Comprueba con todos los miembros de la fila y index se iguala a el mas bajo encontrado
 			for (int i = 0; i <= cantidadDeNodos; i++) {
 
-				if (index > aux->GetValue()) {
-					index = aux->GetValue();
+				if (NodoAinsertar->GetValue() > aux->GetValue()) {
 					NodoAinsertar = aux;
 				}
-				
+
 				aux = aux->GetNext();
 			}
 
-			Swap(current, NodoAinsertar);
+			Swap(NodoAinsertar, current);
 			current = current->GetNext();
 			cantidadDeNodos--;
 
@@ -1076,25 +1016,50 @@ void List::InsertionSort()
 				salir = true;
 			}
 		}
-		break;
-
-	case LISTA_CIRCULAR_LIGADA:
-		break;
-
-
-	case LISTA_LINEAL_DLIGADA:
-		break;
-
-	case LISTA_CIRCULAR_DLIADA:
-		break;
-
-	default:
-		break;
 	}
+	else if(type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIADA){
+
+		// Mientras sea desigual a null avanza y suma, esto sera para saber con cuantos nodos contamos
+		while (current->GetNext() != root) { // Solo cambiara en este paartado la compracion de root
+			current = current->GetNext();
+			cantidadDeNodos++;
+		}
+
+		current = root;
+
+		// Bucle principal
+		while (!salir) {
+
+			aux = current;
+			NodoAinsertar = current;
+
+			// Comprueba con todos los miembros de la fila y index se iguala a el mas bajo encontrado
+			for (int i = 0; i <= cantidadDeNodos; i++) {
+
+				if (NodoAinsertar->GetValue() > aux->GetValue()) {
+					NodoAinsertar = aux;
+				}
+
+				aux = aux->GetNext();
+			}
+
+			Swap(NodoAinsertar, current); // Cambiamos una vez que se detecte cual es el menor y avanzamos el current
+			current = current->GetNext();
+			cantidadDeNodos--;
+
+			if (cantidadDeNodos == 0) {
+				salir = true;
+			}
+		}
+
+	}
+		
+
+	
 	ReadList();
 }
 
-//Recibe los nodos que se cambiaran y cambia el valor
+//Recibe los nodos que se cambiaran y cambia el valor.
 void List::Swap(Nodo* _nodoIzquierda, Nodo* _nodoDerecha)
 {
 	int prov = 0;
