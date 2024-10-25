@@ -237,8 +237,8 @@ void app::menuOrdenamiento()
 		system("CLS");
 		std::cout << "Selecciona el ordenamiento que deseas usar:" << std::endl;
 		std::cout << "[1] - Bubble Sort." << std::endl;
-		std::cout << "[2] - Insertion Sort." << std::endl;
-		std::cout << "[3] - Pendiente." << std::endl;
+		std::cout << "[2] - Selection Sort." << std::endl;
+		std::cout << "[3] - Insertion Sort." << std::endl;
 		std::cout << "[4] - Pendiente." << std::endl;
 		std::cout << "[5] - Pendiente." << std::endl;
 		std::cout << "[6] - Salir." << std::endl;
@@ -265,10 +265,10 @@ void app::menuOrdenamiento()
 			break;
 		}
 		else if (input == "3") {
-			std::cout << "Ordenamiento seleccionado :" << std::endl;
+			std::cout << "Ordenamiento seleccionado : Insertion Sort" << std::endl;
 
 			// Agregar metodo de ordenamineto pendiente
-			std::cout << "3" << std::endl;
+			lista->InsertionSort();
 
 			system("pause");
 			break;

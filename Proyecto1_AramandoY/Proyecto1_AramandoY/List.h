@@ -54,9 +54,11 @@ public:
 	// Ordenamientos 
 	void BubbleSort();
 	void SelectionSort();
+	void InsertionSort();
 
 	// Ordenamientos Herramientas
 	void Swap(Nodo* _nodoIzquierda, Nodo* _nodoDerecha);
+	void Insertar(Nodo* _nodoIzquierda, Nodo* _newNodo);
 
 private:
 	Nodo* root;

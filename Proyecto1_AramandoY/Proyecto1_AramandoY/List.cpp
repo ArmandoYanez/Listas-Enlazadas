@@ -1020,7 +1020,7 @@ void List::SelectionSort()
 	else if(type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIADA){
 
 		// Mientras sea desigual a null avanza y suma, esto sera para saber con cuantos nodos contamos
-		while (current->GetNext() != root) { // Solo cambiara en este paartado la compracion de root
+		while (current->GetNext() != root) {
 			current = current->GetNext();
 			cantidadDeNodos++;
 		}
@@ -1043,7 +1043,7 @@ void List::SelectionSort()
 				aux = aux->GetNext();
 			}
 
-			Swap(NodoAinsertar, current); // Cambiamos una vez que se detecte cual es el menor y avanzamos el current
+			Swap(NodoAinsertar, current);
 			current = current->GetNext();
 			cantidadDeNodos--;
 
@@ -1051,11 +1051,41 @@ void List::SelectionSort()
 				salir = true;
 			}
 		}
-
 	}
-		
 
-	
+	ReadList();
+}
+
+// Algorimo de ordenamiento insercion (COMPLETO 4 EN 1).
+void List::InsertionSort()
+{
+	bool salir = false;
+
+	// Nodo que se va mover
+	Nodo* aux = root;
+
+	// Nodo actual que recorremos para comparar
+	Nodo* current = root->GetNext();
+
+	// Recorremos la lista completa
+	while (!salir) {
+		Nodo* aux = root;
+
+		// Comparamos el nodo actual con los anteriores (para ordenarlos)
+		while (aux != current) {
+			// Si el valor del nodo actual es menor que el de aux, hacemos el Swap
+			if (aux->GetValue() > current->GetValue()) {
+				Swap(aux, current);
+			}
+			aux = aux->GetNext();  // Avanzamos al siguiente nodo en la parte ordenada
+		}
+
+		current = current->GetNext();
+
+		if (current == NULL || current == root) {
+			salir = true;
+		}
+	}
 	ReadList();
 }
 
@@ -1069,5 +1099,70 @@ void List::Swap(Nodo* _nodoIzquierda, Nodo* _nodoDerecha)
 
 	_nodoIzquierda->SetValue(_nodoDerecha->GetValue());
 	_nodoDerecha->SetValue(prov);
+}
+
+// Recibe nodo despues de donde sera incertado
+void List::Insertar(Nodo* _nodoIzquierda, Nodo* _newNodo)
+{
+	Nodo* provisional_Next = root;
+	Nodo* provisional_Prev = root;
+
+	switch (type)
+	{
+	case LISTA_LINEAL_LIGADA:
+
+		// Obtenemos el siguiente actual
+		provisional_Next = _nodoIzquierda->GetNext();
+
+		// Le decimos su nuevo siguiente
+		_nodoIzquierda->SetNext(_newNodo);
+
+		// Conectamos el _newNodo con el siguiente anterior
+		_newNodo->SetNextCircular(provisional_Next);
+		break;
+
+	case LISTA_CIRCULAR_LIGADA:
+
+		// Obtenemos el siguiente actual
+		provisional_Next = _nodoIzquierda->GetNext();
+
+		// Le decimos su nuevo siguiente
+		_nodoIzquierda->SetNext(_newNodo);
+
+		// Conectamos el _newNodo con el siguiente anterior
+		_newNodo->SetNextCircular(provisional_Next);
+		break;
+
+	case LISTA_LINEAL_DLIGADA:
+
+		// Obtenemos el siguiente actual
+		provisional_Next = _nodoIzquierda->GetNext();
+
+		// Le decimos su nuevo siguiente
+		_nodoIzquierda->SetNext(_newNodo);
+
+		// Conectamos el _newNodo con el siguiente anterior
+		_newNodo->SetPreviousCircular(_nodoIzquierda, provisional_Next);
+		provisional_Next->SetPrevValu(_newNodo);
+		
+		break;
+	
+	case LISTA_CIRCULAR_DLIADA:
+
+		// Obtenemos el siguiente actual
+		provisional_Next = _nodoIzquierda->GetNext(); 
+
+		// Le decimos su nuevo siguiente
+		_nodoIzquierda->SetNext(_newNodo); 
+
+		// Conectamos el _newNodo con el siguiente anterior
+		_newNodo->SetPreviousCircular(_nodoIzquierda, provisional_Next); 
+		provisional_Next->SetPrevValu(_newNodo); 
+
+		break;
+	
+	default:
+		break;
+	}
 }
 	

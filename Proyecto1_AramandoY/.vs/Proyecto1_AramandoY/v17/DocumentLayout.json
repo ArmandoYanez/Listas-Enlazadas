@@ -7,8 +7,15 @@
       "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\Nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\crt\\src\\vcruntime\\delete_scalar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,19 +26,12 @@
       "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\Nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\app.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{24FFD54F-0C7A-429A-AA09-E1CD9789E43C}|Proyecto1_AramandoY\\Proyecto1_AramandoY.vcxproj|solutionrelative:Proyecto1_AramandoY\\Nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\crt\\src\\vcruntime\\delete_scalar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,7 +49,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\main.cpp",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\main.cpp",
@@ -62,13 +62,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "app.cpp",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\app.cpp",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.cpp",
               "RelativeToolTip": "Proyecto1_AramandoY\\app.cpp",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAAAAYBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-12T23:27:48.543Z",
               "IsPinned": true
@@ -81,32 +81,31 @@
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\List.cpp",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.cpp",
               "RelativeToolTip": "Proyecto1_AramandoY\\List.cpp",
-              "ViewState": "AgIAAAEDAAAAAAAAAAAgwDAEAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABwEAAAAAAAAAAAmwMwDAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-06T19:16:18.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Nodo.cpp",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.cpp",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\Nodo.cpp",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.cpp",
               "RelativeToolTip": "Proyecto1_AramandoY\\Nodo.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAvwBcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-06T18:26:47.433Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "delete_scalar.cpp",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\crt\\src\\vcruntime\\delete_scalar.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\crt\\src\\vcruntime\\delete_scalar.cpp",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\crt\\src\\vcruntime\\delete_scalar.cpp",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\crt\\src\\vcruntime\\delete_scalar.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T18:10:05.576Z"
             }
@@ -114,37 +113,37 @@
         },
         {
           "DockedWidth": 143,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "List.h",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\List.h",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\List.h",
               "RelativeToolTip": "Proyecto1_AramandoY\\List.h",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-06T19:15:03.325Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Nodo.h",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.h",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\Nodo.h",
               "ToolTip": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\Nodo.h",
               "RelativeToolTip": "Proyecto1_AramandoY\\Nodo.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-06T18:21:47.813Z"
+              "WhenOpened": "2024-09-06T18:21:47.813Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "app.h",
               "DocumentMoniker": "C:\\Users\\Armando\\Desktop\\Listas-enlazadas\\Listas-Enlazadas\\Proyecto1_AramandoY\\Proyecto1_AramandoY\\app.h",
               "RelativeDocumentMoniker": "Proyecto1_AramandoY\\app.h",
