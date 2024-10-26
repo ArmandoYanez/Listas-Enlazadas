@@ -1060,6 +1060,8 @@ void List::SelectionSort()
 void List::InsertionSort()
 {
 	bool salir = false;
+	bool cambio = false;
+	bool salirDonleEnlace = false;
 
 	// Nodo que se va mover
 	Nodo* aux = root;
@@ -1067,25 +1069,75 @@ void List::InsertionSort()
 	// Nodo actual que recorremos para comparar
 	Nodo* current = root->GetNext();
 
-	// Recorremos la lista completa
-	while (!salir) {
-		Nodo* aux = root;
+	if (type == LISTA_LINEAL_LIGADA || type == LISTA_CIRCULAR_LIGADA) {
+		
+		// Recorremos la lista completa
+		while (!salir) {
+			aux = root;
 
-		// Comparamos el nodo actual con los anteriores (para ordenarlos)
-		while (aux != current) {
-			// Si el valor del nodo actual es menor que el de aux, hacemos el Swap
-			if (aux->GetValue() > current->GetValue()) {
-				Swap(aux, current);
+			// Comparamos el nodo actual con los anteriores (para ordenarlos)
+			while (aux != current) {
+				// Si el valor del nodo actual es menor que el de aux, hacemos el Swap
+				if (aux->GetValue() > current->GetValue()) {
+					Swap(aux, current);
+					
+				}
+				aux = aux->GetNext();  // Avanzamos al siguiente nodo en la parte ordenada
 			}
-			aux = aux->GetNext();  // Avanzamos al siguiente nodo en la parte ordenada
-		}
 
-		current = current->GetNext();
+			current = current->GetNext();
 
-		if (current == NULL || current == root) {
-			salir = true;
+			if (current == NULL || current == root) {
+				salir = true;
+			}
 		}
 	}
+	else if (type == LISTA_LINEAL_DLIGADA) {
+
+		while (!salir) {
+			salir = true;  
+			current = root; 
+
+			while (current != NULL) { 
+				// Comparamos el nodo actual con el nodo anterior
+				aux = current->GetPrevious(); 
+
+				while (aux != NULL) { 
+					if (aux->GetValue() > current->GetValue()) {
+						Swap(aux, current);
+						salir = false;  
+					}
+					aux = aux->GetPrevious();   // Retrocedemos al nodo anterior
+				}
+				current = current->GetNext(); 
+			}
+		}
+	}
+	else if (type == LISTA_CIRCULAR_DLIADA) {
+
+		if (root->GetValue() < current->GetValue()) {
+			Swap(root, current);
+		}
+
+		while (!salir) {
+			salir = true;
+
+			while (current != root) {
+				// Comparamos el nodo actual con el nodo anterior
+				aux = current->GetPrevious();
+
+				while (aux != root) {
+					if (aux->GetValue() > current->GetValue()) {
+						Swap(aux, current);
+						salir = false;
+					}
+					aux = aux->GetPrevious();   // Retrocedemos al nodo anterior
+				}
+				current = current->GetNext();
+			}
+		}
+	}
+	
 	ReadList();
 }
 
