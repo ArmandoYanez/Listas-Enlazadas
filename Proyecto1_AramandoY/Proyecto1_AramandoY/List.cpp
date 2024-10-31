@@ -1115,14 +1115,16 @@ void List::InsertionSort()
 	}
 	else if (type == LISTA_CIRCULAR_DLIADA) {
 
-		if (root->GetValue() < current->GetValue()) {
-			Swap(root, current);
-		}
-
 		while (!salir) {
 			salir = true;
+			current = root->GetNext();
 
 			while (current != root) {
+
+				if (current->GetValue() < root->GetValue()) {
+					Swap(root, current);
+				}
+
 				// Comparamos el nodo actual con el nodo anterior
 				aux = current->GetPrevious();
 
