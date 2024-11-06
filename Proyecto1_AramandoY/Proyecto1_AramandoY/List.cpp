@@ -1219,4 +1219,195 @@ void List::Insertar(Nodo* _nodoIzquierda, Nodo* _newNodo)
 		break;
 	}
 }
-	
+
+void List::MergeSort() {
+	Nodo* anterior = root->GetNext();
+	Nodo* nulo = NULL;
+
+	if (type == LISTA_LINEAL_LIGADA || type == LISTA_LINEAL_DLIGADA) {
+		root = mergeSort(root);
+	}
+	else if (type == LISTA_CIRCULAR_DLIADA || type == LISTA_CIRCULAR_LIGADA) { // Truco mañoso
+
+		while (anterior->GetNext() != root)
+		{
+			anterior = anterior->GetNext();
+		}
+
+		anterior->SetNextCircular(nullptr);
+
+		root = mergeSort(root);
+
+		while (anterior->GetNext() != nullptr) {
+			anterior = anterior->GetNext();
+		}
+		anterior->SetNextCircular(root); // Reconecta el último nodo con el nuevo root
+	}
+	ReadList();
+}
+
+// Función recursiva de Merge Sort
+Nodo* List::mergeSort(Nodo* principal) {
+	if (!principal || !principal->GetNext()) {
+		return principal; //si la lista está vacía o tiene un solo nodo
+	}
+
+	// Divide la lista en dos mitades
+	Nodo* mid = findMiddle(principal);
+	Nodo* nextOfMid = mid->GetNext();
+
+	mid->SetNextCircular(nullptr); // Corta la lista en dos
+
+	// Ordena cada mitad
+	Nodo* izquierda = mergeSort(principal);
+	Nodo* derecha = mergeSort(nextOfMid);
+
+	// Fusiona las dos mitades ordenadas
+	return merge(izquierda, derecha);
+}
+
+// Encuentra el nodo medio de la lista
+Nodo* List::findMiddle(Nodo* principal) {
+	if (!principal) return principal;
+
+	Nodo* primer = principal;
+	Nodo* segundo = principal->GetNext();
+
+	// Utiliza dos punteros para encontrar el punto medio
+	while (segundo != nullptr && segundo->GetNext() != nullptr) {
+		primer = primer->GetNext();
+		segundo = segundo->GetNext()->GetNext();
+	}
+
+	return primer; // Devuelve el nodo medio
+}
+
+// Fusiona dos listas ordenadas
+Nodo* List::merge(Nodo* izquierda, Nodo* derecha) {
+	if (!izquierda) return derecha;
+	if (!derecha) return izquierda;
+
+	Nodo* result = nullptr;
+
+	// Compara los valores de los nodos y los fusiona
+	if (izquierda->GetValue() <= derecha->GetValue()) {
+		result = izquierda;
+		result->SetNextCircular(merge(izquierda->GetNext(), derecha));
+	}
+	else {
+		result = derecha;
+		result->SetNextCircular(merge(izquierda, derecha->GetNext()));
+	}
+
+	return result;
+}
+
+
+// Función principal de Quick Sort
+void List::quickSort() {
+
+	Nodo* anterior = root;
+
+	if (type == LISTA_LINEAL_LIGADA || type == LISTA_LINEAL_DLIGADA) {
+		this->root = quickSortRecur(this->root, getTail(this->root));
+	}
+	else if(type == LISTA_CIRCULAR_DLIADA || type == LISTA_CIRCULAR_LIGADA){ // Desconectamos y reconectamospara trabajar con las circulares
+
+		while (anterior->GetNext() != root)
+		{
+			anterior = anterior->GetNext();
+		}
+
+		anterior->SetNextCircular(nullptr);
+
+		this->root = quickSortRecur(this->root, getTail(this->root));
+
+		while (anterior->GetNext() != nullptr) {
+			anterior = anterior->GetNext();
+		}
+		anterior->SetNextCircular(root); // Reconecta el último nodo con el nuevo root
+	}
+
+	ReadList();
+}
+
+// Función de partición para dividir la lista en base al pivote
+Nodo* List::partition(Nodo* start, Nodo* end, Nodo** newStart, Nodo** newEnd) {
+	Nodo* pivote = end;
+	Nodo* prev = nullptr;
+	Nodo* current = start;
+	Nodo* tail = pivote;
+
+	while (current != pivote) {
+		if (current->GetValue() < pivote->GetValue()) {
+			if ((*newStart) == nullptr) {
+				(*newStart) = current;
+			}
+			prev = current;
+			current = current->GetNext();
+		}
+		else {
+			if (prev) {
+				prev->SetNextCircular(current->GetNext());
+			}
+			Nodo* temp = current->GetNext();
+			current->SetNextCircular(nullptr);
+			tail->SetNextCircular(current);
+			tail = current;
+			current = temp;
+		}
+	}
+
+	if ((*newStart) == nullptr) {
+		(*newStart) = pivote;
+	}
+
+	(*newEnd) = tail;
+	return pivote;
+}
+
+// Funcion recursiva de Quick Sort
+Nodo* List::quickSortRecur(Nodo* start, Nodo* end) {
+	if (!start || start == end) {
+		// Caso base: si la lista está vacía o tiene un solo elemento.
+		return start;
+	}
+
+	Nodo* newStart = nullptr;
+	Nodo* newEnd = nullptr;
+
+	// Particionamos la lista y obtenemos el pivote.
+	Nodo* pivote = partition(start, end, &newStart, &newEnd);
+
+	// Si hay nodos antes del pivote, los ordenamos recursivamente.
+	if (newStart != pivote) {
+		//Avanzamos hasta el nodo anterior al pivote para dividir la lista
+		Nodo* temp = newStart;
+		while (temp->GetNext() != pivote) {
+			temp = temp->GetNext();
+		}
+		// Desconectamos la sublista
+		temp->SetNextCircular(nullptr); 
+
+		// Ordenamos la sublista izquierda.
+		newStart = quickSortRecur(newStart, temp);
+
+		// Conectamos el pivote al final de la sublista izquierda
+		temp = getTail(newStart);
+		temp->SetNextCircular(pivote);
+	}
+
+	// Ordenamos la sublista derecha
+	pivote->SetNextCircular(quickSortRecur(pivote->GetNext(), newEnd));
+
+	return newStart;  // Retornamos el inicio de la lista ordenada
+}
+
+
+// Funcion para obtener el último nodo de la lista
+Nodo* List::getTail(Nodo* current) {
+	while (current != nullptr && current->GetNext() != nullptr) {
+		current = current->GetNext();
+	}
+	return current;
+}

@@ -56,6 +56,22 @@ public:
 	void SelectionSort();
 	void InsertionSort();
 
+	// Merge Sort (Extremadamente papu chat giga chat de raro).	
+	void MergeSort();
+
+	Nodo* mergeSort(Nodo* head);
+	Nodo* findMiddle(Nodo* head);
+
+	Nodo* merge(Nodo* left, Nodo* right);
+
+	// Quick Sort (Extremadamente papu chat giga chat de dificil x2).
+	void quickSort();
+	
+	Nodo* partition(Nodo* start, Nodo* end, Nodo** newStart, Nodo** newEnd);
+	Nodo* quickSortRecur(Nodo* start, Nodo* end);
+	Nodo* getTail(Nodo* current);
+	
+
 	// Ordenamientos Herramientas
 	void Swap(Nodo* _nodoIzquierda, Nodo* _nodoDerecha);
 	void Insertar(Nodo* _nodoIzquierda, Nodo* _newNodo);

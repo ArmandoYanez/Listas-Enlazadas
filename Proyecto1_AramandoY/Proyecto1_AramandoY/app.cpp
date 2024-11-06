@@ -1,7 +1,10 @@
-	#include "app.h"
+#include "app.h"
 #include <string>
 #include <sstream>
 #include <limits>
+
+// Para medir los tiempos
+#include <chrono>
 
 enum OPTION {
 	LISTA_LINEAL_LIGADA_OP,
@@ -224,6 +227,9 @@ void app::rellenarLista()
 
 void app::menuOrdenamiento()
 {
+	// Para medir tiempos
+	std::chrono::duration<double, std::milli> duracion;
+
 	//Agreger comprobacion para comprobar si la lista tiene mas de 1 dato para ser utilizado.
 	if (!lista->CheckRoot() || !lista->CheckRootNext()) {
 		std::cout << "Inserte mas valores para poder ordenarlos." << std::endl;
@@ -239,12 +245,14 @@ void app::menuOrdenamiento()
 		std::cout << "[1] - Bubble Sort." << std::endl;
 		std::cout << "[2] - Selection Sort." << std::endl;
 		std::cout << "[3] - Insertion Sort." << std::endl;
-		std::cout << "[4] - Pendiente." << std::endl;
-		std::cout << "[5] - Pendiente." << std::endl;
+		std::cout << "[4] - Merge Sort." << std::endl;
+		std::cout << "[5] - Quick Sort." << std::endl;
 		std::cout << "[6] - Salir." << std::endl;
 
 		std::cin >> input;
 		std::cin.clear();
+
+		auto inicio = std::chrono::high_resolution_clock::now();
 
 		if (input == "1") {
 			std::cout << "Ordenamiento seleccionado : Bubble Sort" << std::endl;
@@ -252,7 +260,6 @@ void app::menuOrdenamiento()
 			// Agregar metodo de ordenamineto burbuja
 			lista->BubbleSort();
 
-			system("pause");
 			break;
 		}
 		else if (input == "2") {
@@ -261,7 +268,6 @@ void app::menuOrdenamiento()
 			// Agregar metodo de ordenamineto InsertionSort
 			lista->SelectionSort();
 
-			system("pause");
 			break;
 		}
 		else if (input == "3") {
@@ -270,32 +276,36 @@ void app::menuOrdenamiento()
 			// Agregar metodo de ordenamineto pendiente
 			lista->InsertionSort();
 
-			system("pause");
 			break;
 		}
 		else if (input == "4") {
-			std::cout << "Ordenamiento seleccionado :" << std::endl;
+			std::cout << "Ordenamiento seleccionado : Merge Sort" << std::endl;
 
-			// Agregar metodo de ordenamineto pendiente
-			std::cout << "4" << std::endl;
+			// Agregar metodo de ordenamineto merge sort
+			lista->MergeSort();
 
-			system("pause");
 			break;
 		}
 		else if (input == "5") {
-			std::cout << "Ordenamiento seleccionado :" << std::endl;
+			std::cout << "Ordenamiento seleccionado : Quick Sort" << std::endl;
 
-			// Agregar metodo de ordenamineto pendiente
-			std::cout << "5" << std::endl;
+			// Agregar metodo de ordenamineto Quick sort
+			lista->quickSort();
 
-			system("pause");
 			break;
 		}
 		else if (input == "6") {
 			break;
 		}
+		auto fin = std::chrono::high_resolution_clock::now();
+
+		// Calcula la duración
+		duracion = fin - inicio;
 	}
 
+	// Muestra el tiempo de ejecución en milisegundos
+	std::cout << "Tiempo de ejecucion: " << duracion.count() << " ms" << std::endl;
+	system("pause");
 	return;
 }
 
